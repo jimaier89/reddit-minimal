@@ -1,0 +1,16 @@
+.sr-container {
+  background-color: white;
+  width: 17%;
+  margin-left: 2rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.item {
+  display: inline;
+}
+
+.sr-icon {
+  width: 2rem;
+  height: auto;
+  border-radius: 50%;
+}

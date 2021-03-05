@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 
+import Loading from './components/loading/Loading';
 import Header from './components/header/Header';
 import Articles from './components/articles/Articles';
 import Subreddits from './components/subreddits/Subreddits';
@@ -37,8 +38,12 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Articles articles={articles}/>
-      <Subreddits />
+      {isLoading && <Loading />}
+      <div className="container">
+        <Articles articles={articles}/>
+        <Subreddits subreddits={subreddits}/>
+      </div>
+      
     </div>
   );
 }

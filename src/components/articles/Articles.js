@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-/* import Comments from '../comments/Comments' */
+import Comments from '../comments/Comments'
 import {TiArrowUpOutline, TiArrowDownOutline} from 'react-icons/ti';
 import {FaRegCommentDots} from 'react-icons/fa';
 import './Articles.css';
@@ -18,13 +18,13 @@ const Articles = ({articles}) => {
             {articles.map((article) => {
                 const {
                     title, 
-                    author, 
-                    url,
+                    author,
+                    url, 
+                    url_overridden_by_dest,
                     thumbnail, 
                     ups, 
                     id, 
                     num_comments, 
-                    /* subreddit_name_prefixed */
                 } = article.data;
                 return (
                     <article className="article" key={id}>
@@ -35,7 +35,7 @@ const Articles = ({articles}) => {
                         </div>
                         <div className="content">
                             <h3 className="title">{title}</h3>
-                            {thumbnail !== 'self' && <img className="thumbnail" src={url} alt=""/>}
+                            {thumbnail !== 'self' && <img className="thumbnail" src={url_overridden_by_dest} alt=""/>}
                             <div className="line"></div>
                             <div className="author-and-comments">
                                 <p className="author">{author}</p>
@@ -43,13 +43,11 @@ const Articles = ({articles}) => {
                                     <FaRegCommentDots className="comments-icon" onClick={toggleComments} />
                                     <p className="num-comments">{num_comments}</p>
                                 </div>
-                                
                             </div>
+                            {showComments && <Comments url={url}/>}
                         </div>
-                        {/* {showComments && <Comments title={title} 
-                            subreddit={subreddit_name_prefixed}
-                            id={id}/>} */}
-                    </article>
+                        
+                    </article> 
                 )
             })}
         </div>
