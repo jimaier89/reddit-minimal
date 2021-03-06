@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 4rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+}
+
+.header-icon {
+  color: red;
+  width: 2.1875rem;
+  height: auto;
+  margin-right: 0.6rem;
+}
+
+.site-title {
+  margin-right: 0.6rem;
+}
+
+.reddit {
+  color: red;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  border: 1px solid rgba(75, 74, 74, 0.452);
+  border-radius: 3px;
+}
+
+.search-field {
+  border: none;
+}
+
+.search-icon {
+  margin-right: 3px;
+}
+
+@media only screen and (max-width: 800px) {
+  .site-title {
+    display: none;
+  }
+}

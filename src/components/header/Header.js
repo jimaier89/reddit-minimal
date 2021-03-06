@@ -10,10 +10,18 @@ const Header = ({ searchVal, setSearchVal, handleSearch }) => {
 
   return (
     <header className='header'>
-      <SiReddit />
-      <h1>reddit minimal</h1>
-      <form onSubmit={handleSearch}>
-        <input type='text' placeholder='search...' onChange={handleChange} />
+      <SiReddit className='header-icon' />
+      <h1 className='site-title'>
+        <span className='reddit'>reddit</span>minimal
+      </h1>
+      <form className='search-container ' onSubmit={handleSearch}>
+        <BsSearch className='search-icon' />
+        <input
+          className='search-field'
+          type='text'
+          placeholder='search...'
+          onChange={handleChange}
+        />
       </form>
     </header>
   );
