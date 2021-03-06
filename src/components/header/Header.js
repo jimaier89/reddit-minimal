@@ -3,14 +3,14 @@ import './Header.css';
 import { SiReddit } from 'react-icons/si';
 import { BsSearch } from 'react-icons/bs';
 
-const Header = ({ searchVal, setSearchVal, handleSearch }) => {
+const Header = ({ reset, setSearchVal, handleSearch }) => {
   const handleChange = (e) => {
     setSearchVal(e.target.value);
   };
 
   return (
     <header className='header'>
-      <SiReddit className='header-icon' />
+      <SiReddit className='header-icon' onClick={reset} />
       <h1 className='site-title'>
         <span className='reddit'>reddit</span>minimal
       </h1>

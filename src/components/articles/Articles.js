@@ -10,6 +10,7 @@ const Articles = ({ articles }) => {
 
   const toggleComments = () => {
     setShowComments(!showComments);
+    setPermalink(permalink);
   };
 
   /* console.log(showComments, permalink); */
@@ -50,12 +51,12 @@ const Articles = ({ articles }) => {
                   <FaRegCommentDots
                     className='comments-icon'
                     onClick={toggleComments}
-                    /* onClick={() => setPermalink(permalink)} */
                   />
                   <p className='num-comments'>{num_comments}</p>
                 </div>
               </div>
             </div>
+            {showComments && <h2>{permalink}</h2>}
           </article>
         );
       })}

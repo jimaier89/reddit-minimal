@@ -50,6 +50,7 @@ function App() {
         searchVal={searchVal}
         setSearchVal={setSearchVal}
         handleSearch={handleSearch}
+        reset={getArticles}
       />
       {isLoading && <Loading />}
       <div className='container'>

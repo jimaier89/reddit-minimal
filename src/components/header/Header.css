@@ -14,10 +14,11 @@
   width: 2.1875rem;
   height: auto;
   margin-right: 0.6rem;
+  cursor: pointer;
 }
 
 .site-title {
-  margin-right: 0.6rem;
+  margin-right: 20%;
 }
 
 .reddit {
@@ -33,6 +34,7 @@
 }
 
 .search-field {
+  width: 10rem;
   border: none;
 }
 
