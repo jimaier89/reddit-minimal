@@ -1,7 +1,17 @@
 .App {
-    background-color: rgb(252, 252, 252);
+  background-color: rgb(252, 252, 252);
 }
 
 .container {
-    display: flex;
+  display: flex;
+  justify-items: center;
+  max-width: 90rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    justify-content: center;
+  }
 }

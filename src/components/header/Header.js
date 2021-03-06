@@ -1,11 +1,22 @@
-import React from 'react'
+import React from 'react';
+import './Header.css';
+import { SiReddit } from 'react-icons/si';
+import { BsSearch } from 'react-icons/bs';
 
-const Header = () => {
-    return (
-        <div>
-            <h1>Header</h1>
-        </div>
-    )
-}
+const Header = ({ searchVal, setSearchVal, handleSearch }) => {
+  const handleChange = (e) => {
+    setSearchVal(e.target.value);
+  };
 
-export default Header
+  return (
+    <header className='header'>
+      <SiReddit />
+      <h1>reddit minimal</h1>
+      <form onSubmit={handleSearch}>
+        <input type='text' placeholder='search...' onChange={handleChange} />
+      </form>
+    </header>
+  );
+};
+
+export default Header;
